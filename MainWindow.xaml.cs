@@ -123,22 +123,30 @@ namespace Directory_and_File_Renamer
 
                 }
 
-                if(words[0] == "") 
+                if (Directory.Exists(finished))
+                {
+                    finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
+                    while (Directory.Exists(finished))
+                    {
+                        i++;
+                        finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
+                    }
+                }
+
+                else if (words[0] == "")
                 {
                     i++;
-
-                    
 
                     finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
                     //If a file doens't have a name, it creates a default name and increments i
                     // to avoid getting a same name crash 
-
-                    if (ChangedFileName == "Default1" || ChangedFileName == "Default2")
+                    if (Directory.Exists(finished))
                     {
-                        
-                        l = 10;
-                        l++;
-                        finished = System.IO.Path.Combine(CombineFilePath, "Default" + l);
+                        while (Directory.Exists(finished))
+                        {
+                            i++;
+                            finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
+                        }
                     }
 
                 }
@@ -190,23 +198,38 @@ namespace Directory_and_File_Renamer
 
                 }
 
-                if (words == "")
+                if (Directory.Exists(finished))
+                {
+                    finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
+                    while(Directory.Exists(finished))
+                    {
+                        i++;
+                        finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
+                    }
+                }
+
+               else if (words == "")
                 {
                     i++;
 
                     finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
                     //If a file doens't have a name, it creates a default name and increments i
                     // to avoid getting a same name crash 
-
-                    if (ChangedFileName == "Default1" || ChangedFileName == "Default2")
+                    if (Directory.Exists(finished))
                     {
-
-                        int l = 10;
-                        l++;
-                        finished = System.IO.Path.Combine(CombineFilePath, "Default" + l);
+                        while (Directory.Exists(finished))
+                        {
+                            i++;
+                            finished = System.IO.Path.Combine(CombineFilePath, "Default" + i);
+                        }
                     }
 
                 }
+
+
+
+                
+
                 Directory.Move(names, finished);
             }
 
