@@ -27,7 +27,7 @@ namespace Directory_and_File_Renamer
         Char[] ListOfCharacters;
         String CharactersToBeDeleted; //Stores characters to be dleeted
         String Location; //Stores location of main directory
-        string[] Directories; //Stories Directorie names
+        string[] Directories; //Stories Directorie Path AND name (Location)
         List<String> foldernames = new List<string>();
         int i = 0; // Control Variable
         int l = 0; // Control Variable
@@ -53,8 +53,8 @@ namespace Directory_and_File_Renamer
 
                 Directories = System.IO.Directory.GetDirectories
                     (Location, "*", System.IO.SearchOption.AllDirectories); //Gets subdirectory names in directory
-                int count = Directories.Count();
-                if (count < 1)
+                int count = Directories.Count(); //Gets the amount of directories inside of the array
+                if (count < 1) //If the array has 0 directories, than throw a this check
                 {
                     System.Windows.MessageBox.Show("This directory has no directories to name!");
                     return;
@@ -62,7 +62,7 @@ namespace Directory_and_File_Renamer
                 
             }
             
-            DataContext = Directories; //Gives folders names to the listbox through the data context.
+            Lbox.DataContext = Directories; //Gives folders names to the listbox through the data context.
             
         }
         #endregion
@@ -81,9 +81,10 @@ namespace Directory_and_File_Renamer
             ListOfCharacters = CharactersToBeDeleted.ToCharArray(); //Extracts the characters from the string in 
             //words to be deleted and stores them in the global array
 
-            CharList.Clear();
+            CharList.Clear(); //Clears the CharList Array for future use
 
-            ListBoxChar.DataContext = ListOfCharacters;
+            ListBoxChar.DataContext = ListOfCharacters; 
+            //Sets ListBox's DataContext to the List of CHaracters array
             
         }
         #endregion
@@ -116,13 +117,13 @@ namespace Directory_and_File_Renamer
 
                 
 
-                if (names == finished)
+                if (names == finished) //If the original path = the new path then ignore and continue to next file
                 {
                     continue;
 
                 }
 
-                if(words[0] == "")
+                if(words[0] == "") 
                 {
                     i++;
 
@@ -153,10 +154,10 @@ namespace Directory_and_File_Renamer
         #region WordTextBox
         private void WordTextBox_Click(object sender, RoutedEventArgs e)
         {
-            WordToBeDeleted = WordList.Text;
+            WordToBeDeleted = WordList.Text; //Sets the string value to whats entered in the text box
 
-            WordListBox.DataContext = WordToBeDeleted;
-            WordList.Clear();
+            WordListBox.DataContext = WordToBeDeleted; //Sets the data context for the Word List Box
+            WordList.Clear(); //Clears WordsList text box
 
         }
 
@@ -165,6 +166,12 @@ namespace Directory_and_File_Renamer
         #region Remove Word Button
         private void RemoveWordButton_Click(object sender, RoutedEventArgs e)
         {
+            if (Location == null)
+            {
+                System.Windows.MessageBox.Show("You need to selecte a Directory first!");
+                return;
+            }
+
             foreach (String names in Directories)
             {
                 string sentence = names;
