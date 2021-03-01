@@ -1,7 +1,7 @@
 # Subdirectory-Word-and-Character-Remover
 Removes characters and words from multiple directories
 
-#How to use 
+# How to use 
 
 1. Choose between removing a word or character from multiple directories.
 
