@@ -1,4 +1,4 @@
-# Directory-and-File-Renamer
+# SubDirectory-Word-and-Character-Remover
 Removes characters and words from multiple directories
 
 #How to use 
