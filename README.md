@@ -14,7 +14,7 @@ Removes characters and words from multiple directories
 
 3. Select Remove Word.
 
-After Remove word is pressed, The string will be removed from subdirectories within the main directory.
+4. After Remove word is pressed, The string will be removed from subdirectories within the main directory.
 
 
 # How to use (Remove Characters)
@@ -26,4 +26,4 @@ After Remove word is pressed, The string will be removed from subdirectories wit
 
 3. Selecte Remove Characters
 
-After Remove Characters is pressed, The string of characters will be removed from subdirectories within the main directory.
+4. After Remove Characters is pressed, The string of characters will be removed from subdirectories within the main directory.
