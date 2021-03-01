@@ -1,6 +1,10 @@
 # Directory-and-File-Renamer
 Removes characters and words from multiple directories
 
+#How to use 
+
+1. Choose between removing a word or character from multiple directories.
+
 
 # How to use (Remove Word)
 
@@ -10,7 +14,7 @@ Removes characters and words from multiple directories
 
 3. Select Remove Word.
 
-After Remove word is pressed, The word will be removed from subdirectories within the main directory.
+After Remove word is pressed, The string will be removed from subdirectories within the main directory.
 
 
 # How to use (Remove Characters)
@@ -22,4 +26,4 @@ After Remove word is pressed, The word will be removed from subdirectories withi
 
 3. Selecte Remove Characters
 
-After Remove Characters is pressed, The characters will be removed from subdirectories within the main directory.
+After Remove Characters is pressed, The string of characters will be removed from subdirectories within the main directory.
