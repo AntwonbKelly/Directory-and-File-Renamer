@@ -1,29 +1,22 @@
 # Subdirectory-Word-and-Character-Remover
 Removes characters and words from multiple directories
 
-# How to use 
-
-1. Choose between removing a word or character from multiple directories.
-
-
 # How to use (Remove Word)
+Select a main directory with subdirectories you'd like to remove a word from.
 
-1. Select a main directory with subdirectories you'd like to remove a word from.
+Enter a word inside the textbox under "Enter Word".
 
-2. Enter a word inside the textbox under "Enter Word".
+Select Remove Word.
 
-3. Select Remove Word.
-
-4. After Remove word is pressed, The string will be removed from subdirectories within the main directory.
-
+After Remove word is pressed, The string will be removed from subdirectories within the main directory.
 
 # How to use (Remove Characters)
+Select a main directory with the subdirectories you'd like to remove a word from.
+
+Enter characters inside the textbox under "Enter Characters".
+
+Select Remove Characters
+
+After Remove Characters is pressed, The string of characters will be removed from the subdirectories within the main directory.
 
 
-1. Select a main directory with subdirectories you'd like to remove a word from.
-
-2. Enter characters inside the textbox under "Enter Characters".
-
-3. Selecte Remove Characters
-
-4. After Remove Characters is pressed, The string of characters will be removed from subdirectories within the main directory.
